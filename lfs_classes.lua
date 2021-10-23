@@ -164,7 +164,7 @@ local LFS = {
   end,
   ---Sets the writing mode for a file. The mode string can be either "binary" or "text". Returns true followed the previous mode string for the file, or nil followed by an error string in case of errors. On non-Windows platforms, where the two modes are identical, setting the mode has no effect, and the mode is always returned as binary.
   ---@param file file*
-  ---@param mode "binary"|"text"
+  ---@param mode '"binary"'|'"text"'
   ---@return boolean|nil
   ---@return string @ previous mode or error message
   setmode = function(file, mode)

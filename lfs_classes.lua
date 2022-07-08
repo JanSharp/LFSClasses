@@ -16,8 +16,6 @@ local LFSDirObject = {
 
 ---@class LFSLock
 
----@class LFSLinkObject
-
 ---@class LFSAttributes
 ---@field dev number @ on Unix systems, this represents the device that the inode resides on. On Windows systems, represents the drive number of the disk containing the file
 ---@field ino number @ on Unix systems, this represents the inode number. On Windows systems this has no meaning
@@ -141,7 +139,7 @@ local LFS = {
   lock = function(filehandle, mode, start, length)
   end,
   ---Creates a link. The first argument is the object to link to and the second is the name of the link. If the optional third argument is true, the link will by a symbolic link (by default, a hard link is created).
-  ---@param old LFSLinkObject
+  ---@param old string
   ---@param new string
   ---@param symlink? boolean
   link = function(old, new, symlink)
